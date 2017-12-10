@@ -1,0 +1,92 @@
+
+<body>
+  <div clss= "entitydetails-container" >
+  
+  <div class="w3-container w3-teal">
+          <div class="sur-header-logo">
+              <img src=".\assets\images\flavours.png" alt="" >
+              <h1>FlAvOuRs CaStLe</h1>
+          </div>
+  
+  </div>
+  <div class="sur-hero-image">
+      <h2 style= "">User Reviews.</h2>
+   
+    
+    </div>
+    
+    <div  style="text-align: center;">
+        <h3>Festival of food available only in flavours castle</h3>
+        <h2> ​Our Ratings </h2>
+       
+    </div>
+
+    <div class="container-fluid"  style="text-align: center;" >
+        
+           <div class="row">
+             <div class="col-md-6" >
+                <h2 class="">FOOD</h2>
+                <star-rating-comp [starType]="'svg'" [rating]="food"></star-rating-comp>
+               <img src=".\assets\images\admin2.jpg" alt="" >
+             </div>
+             <div class="col-md-6" >
+                <h2 class="">AMBIANCE  </h2>
+                <star-rating-comp [starType]="'svg'" [rating]="ambiance"></star-rating-comp>
+               <img src=".\assets\images\ambience.jpg" alt="" >
+             </div>
+             <div class="col-md-6" >
+                <h2 class="">SERVICES</h2>
+                <star-rating-comp [starType]="'svg'" [rating]="service"></star-rating-comp>
+               <img src=".\assets\images\services.jpg" alt="" >
+             </div>
+             <div class="col-md-6" >
+                <h2 class="">PRICING  </h2>
+                <star-rating-comp [starType]="'svg'" [rating]="price"></star-rating-comp>
+               <img src=".\assets\images\price.jpg" alt="" >
+             </div>
+           </div>
+         </div>
+    <div style="text-align: center;">
+          <div [formGroup]="addEntityForm">
+            
+             <div> <h2> ​User FeedBack </h2></div>
+                  <div class ="comments" >
+
+                    <div *ngFor= "let n of feedback" >
+                        <div class="col-md-12" >
+                            <h3 class="">{{n.Name}}  </h3>
+                            <p> {{n.feedback}}</p>
+                         </div>
+                   
+                    
+                   
+                  </div>
+                  </div>
+                
+              
+              
+          
+  
+                <br>
+               
+              
+        
+               
+              </div>
+  
+  
+    </div>
+    <br>
+
+   
+    <div class="w3-container w3-teal">
+          <span class="sur-fouter-logo">
+              <img src=".\assets\images\flavours.png" alt="" >
+              <p class="sur-footer-copyright">&copy;2017 FlAvOuRs CaStLe.</p>
+          </span>
+  
+  </div>
+    </div>
+  
+  </body>
+  <router-outlet></router-outlet>
